@@ -13,7 +13,7 @@ class PrototypesController < ApplicationController
   def create
     @prototype = Prototype.create(prototype_params)
     if @prototype.save
-      render 'index'
+      redirect_to action: :index
     else
       render 'new'
     end
